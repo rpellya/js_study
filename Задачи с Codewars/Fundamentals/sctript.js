@@ -53,3 +53,81 @@ const accum = s =>{
    }
    return result.join('-');
 }
+
+
+/*
+3. 
+Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+
+*/
+const squareSum = (numbers) => {
+   let sum = 0;
+   let value;
+   for(let i=0; i<numbers.length; i++ ){
+     value = numbers[i] * numbers[i];
+     sum += value;
+   }
+   return sum;
+ }
+  
+
+/*
+4. Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+
+function getGrade (s1, s2, s3) {
+  avg = (s1+s2+s3)/3;
+  if (avg < 60)  return "F";
+    else if (avg < 70) return "D";
+    else if (avg < 80) return "C";
+    else if (avg < 90) return "B";
+    else return "A";
+}
+
+*/
+
+const getGrade = (s1, s2, s3) => {
+   let average = (s1+s2+s3)/3;
+   if(average >= 90){
+     return 'A';
+   }
+   if(average >= 80){
+     return 'B';
+   }
+   if(average >= 70){
+     return 'C';
+   }
+   if(average >= 60){
+     return 'D';
+   }
+   else{
+     return 'F';
+   }
+ }
+
+/*
+5. Write function bmi that calculates body mass index (bmi = weight / height2).
+
+if bmi <= 18.5 return "Underweight"
+
+if bmi <= 25.0 return "Normal"
+
+if bmi <= 30.0 return "Overweight"
+
+if bmi > 30 return "Obese"
+
+*/
+const bmi = (weight, height) => {
+   let mass = (weight / (height*height));
+   if (mass > 30)
+     return 'Obese';
+   else if (mass <= 18.5)
+     return 'Underweight';
+   else if (mass <= 25.0)
+     return 'Normal';
+   else if (mass <= 30)
+     return 'Overweight';
+ }
+
