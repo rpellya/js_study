@@ -7,3 +7,10 @@
  *
  * 3. Выведите значение последней переменной в консоль
  */
+const firstNumber = 5;
+
+const secondNumber = 10;
+
+let increase = firstNumber * secondNumber;
+
+console.log(increase) // 50
