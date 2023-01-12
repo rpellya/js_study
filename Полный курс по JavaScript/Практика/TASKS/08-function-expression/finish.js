@@ -10,3 +10,8 @@
  *
  * 5. Результат вызовов функции выведите в консоль
  */
+
+const myName = function (name){return `${'Привет,'} ${name}`}
+
+console.log(myName('Roman')) // Привет, Roman
+console.log(myName('World')) // Привет, World
